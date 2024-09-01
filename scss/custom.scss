@@ -1,0 +1,10 @@
+// Include any default variable overrides here (though functions won't be available)
+
+//<- tady (nad @importem) je mozne vkladat css atributy pro prepsani hodnot puvodnich atributu
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+//⚠️bootstrap.scss -> musí byt uvedena přípona (bez přípony to někdy soubor nenajde a hlásí chybu)
+//<- tady (pod @importem) se vypisuji nove vlastne vymyslene css atributy
+
+// Then add additional custom code here

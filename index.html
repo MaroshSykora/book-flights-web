@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/custom.css" />
+  </head>
+  <body>
+    <!-- MAIN ZACATEK -->
+    <section name="main" class="container mt-5">
+      <div class="row">
+        <!-- DESTINATION SEZNAM ZACATEK -->
+        <div class="col-12 col-md-6">
+          <select
+            id="destinace-vyber"
+            class="form-select form-select-lg mb-3"
+            aria-label="Small select example"
+          >
+            <option selected>Destination</option>
+            <option value="Prague">Prague 500 CZK</option>
+            <option value="Frankfurt">Frankfurt 3000 CZK</option>
+            <option value="New York">New York 15000 CZK</option>
+            <option value="Sydney">Sydney 30000 CZK</option>
+          </select>
+        </div>
+        <!-- DESTINATION SEZNAM KONEC -->
+
+        <!-- PASSENGERS SEZNAM ZACATEK -->
+        <div class="col-12 col-md-6">
+          <select
+            id="passengers"
+            class="form-select form-select-lg"
+            aria-label="select example"
+          >
+            <option selected>Passengers</option>
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <!-- PASSENGERS SEZNAM KONEC -->
+
+        <!-- CHECKBOX ROUND TRIP ZACATEK -->
+        <div class="col">
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input
+                id="returnCheckbox"
+                class="form-check-input mt-0"
+                type="checkbox"
+                value=""
+                aria-label="Checkbox for following text input"
+              />
+              <label class="mx-3" for="return">Round trip</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CHECKBOX ROUND TRIP KONEC -->
+
+      <!-- RADIOBUTTONS ZACATEK -->
+      <div class="row mt-2">
+        <div id="radioButtons" class="col-12">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="economyRadioButton"
+              value="economy"
+              checked
+            />
+            <label class="form-check-label" for="exampleRadios1">
+              Economy class - Without additional charge
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="businessRadioButton"
+              value="business"
+            />
+            <label class="form-check-label" for="exampleRadios2">
+              Business class - + 25%
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="royalRadioButton"
+              value="royal"
+            />
+            <label class="form-check-label" for="exampleRadios3">
+              Royal class - + 50%
+            </label>
+          </div>
+        </div>
+        <!-- RADIBUTTONS KONEC -->
+
+        <!-- FORMULAR ZACATEK -->
+        <div class="row mt-4">
+          <div class="col-12 col-md-7">
+            <ol class="list-group list-group-numbered">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div id="vystupCenyEconomy" class="ms-2 me-auto">
+                  <div class="fw-bold">Economy class:</div>
+                  Calculating price...
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div id="vystupCenyBusiness" class="ms-2 me-auto">
+                  <div class="fw-bold">Business class</div>
+                  Calculating price...
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div id="vystupCenyRoyal" class="ms-2 me-auto">
+                  <div class="fw-bold">Royal class</div>
+                  Calculating price...
+                </div>
+              </li>
+            </ol>
+          </div>
+          <!-- FORMULAR KONEC -->
+
+          <!-- AMOUNT CHECK ZACATEK-->
+          <div class="col-12 col-md-5">
+            <div class="input-group mb-3">
+              <input
+                id="amountToSpend"
+                type="text"
+                class="form-control"
+                placeholder="Amount to spend"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+              >
+                Check
+              </button>
+            </div>
+            <div id="resultAmount" class="mt-3"></div>
+            <!-- VYSLEDEK CENY ZACATEK -->
+            <div>
+              <span id="vysledekCeny">Vysledna cena</span>
+            </div>
+            <!-- VYSLEDEK CENY KONEC -->
+          </div>
+        </div>
+
+        <!-- AMOUNT CHECK KONEC -->
+
+        <div class="row">
+          <div class="col-12">
+            <!-- TEXTAREA ZACATEK -->
+            <label for="textArea" class="form-label"></label>
+            <textarea
+              class="form-control"
+              id="textArea"
+              rows="10"
+              cols="40"
+              placeholder="For more information please type your message:"
+            ></textarea>
+            <!-- TEXTAREA KONEC -->
+
+            <!-- BOOK BUTTON ZACATEK -->
+            <button type="button" class="btn btn-primary m-2 px-4">Book</button>
+            <!-- BOOK BUTTON KONEC -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MAIN KONEC -->
+
+    <!-- VLASTNI SKCRIPT -->
+    <script src="./script.js"></script>
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
